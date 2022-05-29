@@ -25,11 +25,12 @@
     <h1>Hey there!!!</h1>
     <p>It's been a <b>long</b> while</p>
     <a href="https://www.google.com" target="blank">Click me!!!</a>
-    <h3>What do you think of pants?</h3>
-    <div class="container">
+    <h3 id="what">What do you think of pants?</h3>
+    <button type="button" onclick="change()">Click Me!</button>
+        <div class="container">
         <div class="row">
           <div class="col-sm">
-            <p>I like chimpanzies</p>
+            <p id="ilike">I like chimpanzies</p>
           </div>
           <div class="col-sm">
             One of three columns
@@ -40,7 +41,7 @@
         </div>
         <div class="row">
             <div class="col-sm">
-              One of three columns
+                <p>ap9uja</p>
             </div>
             <div class="col-sm">
               One of three columns
@@ -53,5 +54,33 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+      <script>
+          console.log("test");
+          let arrayOfNumbers = [0,1,2,3,1000,5,6,7,8,9]
+          let pararaph = document.getElementById('what');
+          //change(){
+          //}
+          const change = function change() {
+            let ilike = document.getElementById('ilike');
+            if(ilike.textContent == "I like zebra"){
+                ilike.textContent = "I like chimpanzies";
+            } else {
+                ilike.textContent = "I like zebra";
+            }
+
+            }
+          for(let i = 0; i < 10; i++) {
+              if(arrayOfNumbers[i] > 4){
+                  console.log("this is a big number!!")
+                pararaph.textContent = "Test";
+                  
+              } else if(arrayOfNumbers[i]  < 2) {
+                  console.log("this is a small number!!");
+              } else {
+                console.log("this is a medium number!!")
+
+              }
+          }
+      </script>
 </body>
 </html>
